@@ -1,7 +1,7 @@
 # Overview
 
-Smithsonian has an open access collection consisting of various dataset from museums, archives, etc.
-The collection stores both metadata and images from each dataset.
+Smithsonian has an open access collection consisting of various datasets from museums, archives, etc.
+The collection stores both metadata and images from each dataset (https://github.com/rsheth-dwave/smithsonian-dataset).
 The scripts in this repo scan a dataset for CC0 images (based on the metadata) and downloads those images.
 There are also scripts for listing image resolutions, resizing images, and creating ready-to-go Pytorch-ingestible datasets with train/val splits.
 
@@ -9,8 +9,11 @@ There are also scripts for listing image resolutions, resizing images, and creat
 
 ## Programs
 `python`: for scanning license info in metadata
+
 `aria2`: for downloading images
+
 `parallel`: for resizing images
+
 `libvips-tools`: for resizing images
 
 ## Python packages
@@ -19,10 +22,15 @@ There are also scripts for listing image resolutions, resizing images, and creat
 # Files
 
 `download-metadata.sh`: Retrieve jsonl files containing individual image license info
+
 `manifest_cc0.py`: Scan jsonl metadata files for CC0 image licenses
+
 `download-images.sh`: Retrieve CC0 images
+
 `scan_resolutions.py`: List resolutions of images in a dir
+
 `resize.sh`: Resize images (preserves aspect ratio)
+
 `make_split.py`: Creates train/test split directories (with soft links)
 
 # Steps
