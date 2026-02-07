@@ -14,4 +14,4 @@ then
 else
     PTH=metadata/"$SUBDIR"_urls.txt 
 fi
-aria2c -i "$PTH" -x 16 -s 16 -j 16 -d images/$SUBDIR --summary-interval=1
+aria2c -i "$PTH" -x 16 -s 16 -j 16 -d images/$SUBDIR --summary-interval=1 --auto-file-renaming=false
